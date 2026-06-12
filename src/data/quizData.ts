@@ -49,7 +49,7 @@ export const perguntasQuiz: PerguntaQuiz[] = [
   {
     id: 4,
     pergunta: 'O que eu mais gosto em você?',
-    opcoes: ['Seu jeito', 'Seu cuidado', 'Sua parceria', 'Todas as anteriores'],
+    opcoes: ['Seu jeito', 'Seu cuidado', 'Sua parceria', 'Todas as respostas'],
     respostaCorreta: 'Todas as respostas',
     // imagem: '/images/foto-quiz-4.jpg',
   },

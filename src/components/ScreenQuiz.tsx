@@ -15,8 +15,20 @@ function embaralhar<T>(itens: T[]): T[] {
   return [...itens].sort(() => Math.random() - 0.5)
 }
 
+function validarPerguntas(perguntas: PerguntaQuiz[]): PerguntaQuiz[] {
+  perguntas.forEach((pergunta) => {
+    if (!pergunta.opcoes.includes(pergunta.respostaCorreta)) {
+      console.warn(
+        `Pergunta ${pergunta.id}: resposta correta "${pergunta.respostaCorreta}" nao esta nas opcoes.`,
+      )
+    }
+  })
+
+  return perguntas
+}
+
 function criarRodadaAleatoria(): PerguntaQuiz[] {
-  return embaralhar(perguntasQuiz).map((pergunta) => ({
+  return embaralhar(validarPerguntas(perguntasQuiz)).map((pergunta) => ({
     ...pergunta,
     opcoes: embaralhar(pergunta.opcoes),
   }))
