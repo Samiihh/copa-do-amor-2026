@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===================================================
+   COPA DO AMOR 2026 — Estilos globais
+   =================================================== */
+
+:root {
+  --campo-grass: #15803d;
+  --campo-green-dark: #166534;
+  --campo-black: #0f172a;
+  --campo-red: #dc2626;
+  --campo-purple: #7c3aed;
+  --campo-gold: #fbbf24;
+  --campo-white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--campo-black);
+  color: var(--campo-white);
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Fundo "estádio": gramado com faixas, linhas de campo e luz ambiente */
+.stadium-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  background-color: var(--campo-grass);
+  background-image:
+    radial-gradient(circle at 50% -15%, rgba(251, 191, 36, 0.18) 0%, rgba(251, 191, 36, 0) 34%),
+    radial-gradient(circle at 85% 92%, rgba(124, 58, 237, 0.22) 0%, rgba(124, 58, 237, 0) 42%),
+    linear-gradient(rgba(15, 23, 42, 0.2), rgba(15, 23, 42, 0.55)),
+    repeating-linear-gradient(
+      90deg,
+      rgba(21, 128, 61, 0.96) 0,
+      rgba(21, 128, 61, 0.96) 9vw,
+      rgba(22, 101, 52, 0.96) 9vw,
+      rgba(22, 101, 52, 0.96) 18vw
+    );
+}
+
+.stadium-bg::before {
+  content: '';
+  position: absolute;
+  inset: clamp(1.25rem, 4vw, 4rem);
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  border-radius: 1.5rem;
+  background-image:
+    linear-gradient(
+      90deg,
+      transparent calc(50% - 1px),
+      rgba(255, 255, 255, 0.16) calc(50% - 1px),
+      rgba(255, 255, 255, 0.16) calc(50% + 1px),
+      transparent calc(50% + 1px)
+    ),
+    radial-gradient(circle at center, transparent 0 10.5vw, rgba(255, 255, 255, 0.15) 10.6vw 10.85vw, transparent 11vw),
+    radial-gradient(circle at center, rgba(255, 255, 255, 0.22) 0 3px, transparent 4px);
+}
+
+.stadium-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at center, rgba(255, 255, 255, 0.04) 0%, rgba(15, 23, 42, 0) 45%),
+    radial-gradient(ellipse at center, rgba(15, 23, 42, 0) 35%, rgba(15, 23, 42, 0.48) 100%);
+}
+
+/* Textura sutil de grama para o fundo */
+.stadium-lines {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.12;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.12) 0 1px, transparent 1px 5px),
+    repeating-linear-gradient(90deg, rgba(15, 23, 42, 0.14) 0 1px, transparent 1px 7px);
+  mix-blend-mode: soft-light;
+}
+
+/* Scrollbar customizada */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--campo-green-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--campo-grass);
+  border-radius: 4px;
+}
+
+/* Texto com contorno tipo placar de estádio */
+.scoreboard-text {
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Brilho de texto neon roxo/vermelho */
+.text-glow-purple {
+  text-shadow: 0 0 10px rgba(124, 58, 237, 0.8), 0 0 30px rgba(124, 58, 237, 0.5);
+}
+.text-glow-red {
+  text-shadow: 0 0 10px rgba(220, 38, 38, 0.8), 0 0 30px rgba(220, 38, 38, 0.4);
+}
+.text-glow-gold {
+  text-shadow: 0 0 12px rgba(251, 191, 36, 0.8), 0 0 35px rgba(251, 191, 36, 0.4);
+}
+
+/* Cartão estilo "figurinha de álbum" */
+.sticker-card {
+  background: linear-gradient(160deg, rgba(22, 101, 52, 0.78) 0%, rgba(15, 23, 42, 0.96) 100%);
+  border: 2px solid rgba(21, 128, 61, 0.5);
+  border-radius: 1.25rem;
+  position: relative;
+}
+
+.sticker-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 1.25rem;
+  padding: 2px;
+  background: linear-gradient(135deg, var(--campo-grass), var(--campo-gold), var(--campo-purple), var(--campo-red));
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* ===================================================
+   FIGURINHAS DO ÁLBUM (fundo animado)
+   =================================================== */
+
+/* Cartela com borda holográfica, estilo figurinha de Copa do Mundo */
+.figurinha-card {
+  position: relative;
+  border-radius: 0.85rem;
+  padding: 4px;
+  background: linear-gradient(
+    115deg,
+    var(--campo-grass) 0%,
+    var(--campo-gold) 25%,
+    var(--campo-purple) 50%,
+    var(--campo-red) 75%,
+    var(--campo-grass) 100%
+  );
+  background-size: 250% 250%;
+  animation: shimmer 3.5s linear infinite;
+  box-shadow: 0 0 18px rgba(251, 191, 36, 0.35), 0 0 30px rgba(21, 128, 61, 0.35);
+}
+
+.figurinha-card__inner {
+  background-color: var(--campo-black);
+  border-radius: 0.7rem;
+  overflow: hidden;
+}
+
+/* Flash de "impacto" quando a bolinha bate na tela */
+.bola-flash {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.95) 0%, rgba(251, 191, 36, 0.6) 35%, rgba(220, 38, 38, 0) 70%);
+  border-radius: 50%;
+}
