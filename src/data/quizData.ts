@@ -8,8 +8,8 @@ import type { PerguntaQuiz } from '../types'
  *
  * Campo "imagem" (opcional):
  * Caso queira exibir uma foto em uma pergunta específica, coloque o
- * arquivo dentro de `src/assets/images/` e referencie o caminho aqui,
- * por exemplo: imagem: '/src/assets/images/foto-quiz-1.jpg'
+ * arquivo dentro de `public/images/` e referencie o caminho aqui,
+ * por exemplo: imagem: '/images/foto-quiz-1.jpg'
  * Se não quiser foto em uma pergunta, basta remover ou deixar a
  * propriedade "imagem" de fora.
  * ===================================================================
@@ -25,7 +25,7 @@ export const perguntasQuiz: PerguntaQuiz[] = [
       'Uma missão especial',
     ],
     respostaCorreta: 'Uma missão especial',
-    // imagem: '/src/assets/images/foto-quiz-1.jpg',
+    // imagem: '/images/foto-quiz-1.jpg',
   },
   {
     id: 2,
@@ -37,28 +37,28 @@ export const perguntasQuiz: PerguntaQuiz[] = [
       'Dois anjos calmos',
     ],
     respostaCorreta: 'Amor, risada e implicância',
-    // imagem: '/src/assets/images/foto-quiz-2.jpg',
+    // imagem: '/images/foto-quiz-2.jpg',
   },
   {
     id: 3,
     pergunta: 'Se nosso relacionamento fosse um jogo, você seria:',
     opcoes: ['NPC aleatório', 'Boss difícil', 'Meu player 2', 'Tutorial pulável'],
     respostaCorreta: 'Meu player 2',
-    // imagem: '/src/assets/images/foto-quiz-3.jpg',
+    // imagem: '/images/foto-quiz-3.jpg',
   },
   {
     id: 4,
     pergunta: 'O que eu mais gosto em você?',
     opcoes: ['Seu jeito', 'Seu cuidado', 'Sua parceria', 'Todas as anteriores'],
     respostaCorreta: 'Todas as respostas',
-    // imagem: '/src/assets/images/foto-quiz-4.jpg',
+    // imagem: '/images/foto-quiz-4.jpg',
   },
   {
     id: 5,
     pergunta: 'Quando penso na gente, eu penso em:',
     opcoes: ['Construção', 'Amor', 'Futuro', 'Tudo isso junto'],
     respostaCorreta: 'Tudo isso junto',
-    // imagem: '/src/assets/images/foto-quiz-5.jpg',
+    // imagem: '/images/foto-quiz-5.jpg',
   },
   {
     id: 6,

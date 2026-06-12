@@ -29,11 +29,11 @@ export const conteudoEscalacao = {
   tituloSecao: 'Escalação Oficial',
   /**
    * Caminho da foto do casal em destaque.
-   * Troque pelo caminho da sua imagem em `src/assets/images/`.
+   * Troque pelo caminho da sua imagem em `public/images/`.
    */
-  fotoCasal: '/src/assets/images/casal-principal.jpg',
-  fotoSamy: '/src/assets/images/samy.png',
-  fotoThi: '/src/assets/images/thi.png',
+  fotoCasal: '/images/casal-principal.jpg',
+  fotoSamy: '/images/samy.png',
+  fotoThi: '/images/thi.png',
   tecnica: { funcao: 'Camisa 10', nome: 'Samira' },
   camisa10: { funcao: 'Camisa 12', nome: 'Thiago' },
   // 👇 Variável: ajuste o tempo de relacionamento livremente
@@ -49,10 +49,10 @@ export const conteudoVAR = {
   tituloSecao: 'VAR do Amor',
   /**
    * Foto antiga do casal analisada pelo "VAR".
-   * Troque pelo caminho da sua imagem em `src/assets/images/`.
+   * Troque pelo caminho da sua imagem em `public/images/`.
    */
-  fotoAnalise: '/src/assets/images/var.png',
-  fotoAntiga: '/src/assets/images/IMG_20231014_212201_048.webp',
+  fotoAnalise: '/images/var.png',
+  fotoAntiga: '/images/IMG_20231014_212201_048.webp',
   pergunta: 'Aguardando confirmação do lance...',
   perguntaRevelada: 'Você lembra desse momento?',
   // 👇 Edite livremente a "resposta" / legenda do momento revisado
