@@ -1,4 +1,4 @@
-# 🏆 Copa do Amor 2026 — Uma História em Campo
+# 🏆 Copa do Amor 2026 - Uma História em Campo
 
 Este projeto representa uma celebração.
 
